@@ -1,8 +1,8 @@
 # functions
 # functions hide complexity
 # functions abstraction
-
-def ohhyeah(message):
+from time import sleep
+def ohhyea1qh(message):
     print(message)
 
 ohhyeah("jsdhvgjka")
