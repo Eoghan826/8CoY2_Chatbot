@@ -1,14 +1,75 @@
-# print statement displays text in the console
-# speechmarks around words means string (string of characters)
-print("hello world")
 
-# we assign a string "Mr Davies" to a variable
-name = "Mr Davies"
+HANGMANPICS = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
 
-# umm so basically, the input the user types to the question "what is your name" will be assigned to the name variable.
-name = input("what is your name? ")
-
-# if statement, if the condition is true, then do the code below
-# double equals check for equality
-if(name == "Mr Davies"):
-    print("no not you!?!")
+#Word bank of animals
+print(HANGMANPICS[0])
+print("This is hangman! Hangman will be hanged if you get too many letters wrong.")
+secretword = input("what is your secret word? ")
+print ("\n"*100)
+showword = " " * len (secretword)
+guess = input ("what is your guess? ")
+# do this automatically
+tempShowword = ""
+count = 0
+for letter in secretword:
+    if letter == guess: # it's the same!
+        print ("Yippee! You got a letter correct!")
+        print ("So far your word is ")
+        tempShowword += guess
+    else:
+        if list (showword) [count] == "_":
+            tempShowword += "-"
+        else:
+            tempShowword += list (showword) [count]
+        count += 1
+showword = tempShowword
+print (showword)
