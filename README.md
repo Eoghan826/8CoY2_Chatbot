@@ -2,7 +2,10 @@
 # functions hide complexity
 # functions abstraction
 from time import sleep
-def ohhyea1qh(message):
-    print(message)
 
-ohhyeah("jsdhvgjka")
+def sigma(message):
+    for letter in message:
+        sleep(0.1)
+        print(letter, end="")
+
+sigma("jsdhvgjka")  
