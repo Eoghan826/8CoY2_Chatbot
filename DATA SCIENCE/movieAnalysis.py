@@ -1,5 +1,5 @@
 import pandas as pd
-datafile = pd.read_csv("Top Rated 9000 Movies")
+datafile = pd.read_csv("Top Rated 9000 Movies TMDB.csv ")
 
 for i, record in dataFile.iterrows():
     if  "m" in record['title'] or "n" in record['title']:
