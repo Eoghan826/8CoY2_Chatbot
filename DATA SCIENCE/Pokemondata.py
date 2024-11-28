@@ -3,8 +3,7 @@ datafile = pd.read_csv("Pokemon.csv")
 count_a = 0
 totala = 0
 for i, record in datafile.iterrows():
-    if 80 < int(record['Sp. Atk']):
+    if 'Dragon' == int(record['Type 1']):
         count_a += 1
-        totala += int(record['Sp. Atk'])
+        totala += int(record['Type 1'])
         print(count_a)
-        print(totala)
