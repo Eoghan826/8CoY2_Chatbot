@@ -8,6 +8,8 @@ RESET = '\033[0m'
 for i, record in datafile.iterrows():
     trackName = record['master_metadata_track_name']
     if trackName:
-        word = 'red'
+        word = 'Redrun'
         if word in trackName:
-            print(f"{trackName[:trackName.find(word)]}{RED}red{RESET}{trackName:}")
+            print(f"{trackName[:trackName.find(word)]}{RED}Redrun{RESET}{trackName:}")
+
+            #code that went after trackName: was   [trackName.find(word)+len(word)-1]      it told the thing to stop printing at the end of the word
