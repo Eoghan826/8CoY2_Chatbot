@@ -8,6 +8,6 @@ RESET = '\033[0m'
 for i, record in datafile.iterrows():
     trackName = record['master_metadata_track_name']
     if trackName:
-        word = 'Beautiful'
+        word = 'red'
         if word in trackName:
             print(f"{trackName[:trackName.find(word)]}{RED}red{RESET}{trackName[trackName.find(word)+len(word)-1]:}")
