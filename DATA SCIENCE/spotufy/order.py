@@ -10,4 +10,4 @@ for i, record in datafile.iterrows():
     if trackName:
         word = 'red'
         if word in trackName:
-            print(f"{trackName[:trackName.find(word)]}{RED}red{RESET}{trackName[trackName.find(word)+len(word)-1]:}")
+            print(f"{trackName[:trackName.find(word)]}{RED}red{RESET}{trackName:}")
